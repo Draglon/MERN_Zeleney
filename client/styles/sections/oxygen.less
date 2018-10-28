@@ -1,0 +1,28 @@
+.oxygen {
+    background-image: url('../../images/oxygen.png');
+    background-position: center 80px;
+    background-repeat: no-repeat;
+    background-size: 120px 80px;
+    margin: 2em 0;
+    padding: 20em 0 10em;
+    text-align: center;
+    & + section {
+        border-top: 1px solid @gray-border;
+    }
+
+    &_title {
+        border-bottom: 1px solid @yellow-border;
+        display: inline-block;
+        font-size: @font-size38;
+        font-weight: normal;
+        padding: 0 1em;
+        margin-bottom: 20px;
+    }
+
+    &_text {
+        font-size: @font-size19;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}

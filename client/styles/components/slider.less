@@ -1,0 +1,75 @@
+.slider {
+    position: relative;
+
+    &_wrapper {
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &_container {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &_item {
+        float: left;
+        position: relative;
+        width: 800px;
+        .transition(left .5s);
+
+        &.active {
+            
+        }
+
+        img {width: 100%;}
+    }
+
+    &_label {
+        background-color: rgba(255, 255, 255, .5);
+        font-size: 14px;
+        padding: .5em .75em;
+        position: absolute;
+        bottom: 1.5em;
+        left: 0;
+        width: 280px;
+        text-align: center;
+    }
+
+    &_arrow {
+        background-color: rgba(255, 255, 255, .5);
+        color: @gray;
+        cursor: pointer;
+        position: absolute;
+        top: ~'calc(50% - 2em)';
+        width: 4em;
+        height: 4em;
+        opacity: 0;
+        z-index: 1;
+        .transition(opacity .5s);
+
+        &:before {
+            content: '';
+            border-left: 1px solid @gray;
+            border-top: 1px solid @gray;
+            position: absolute;
+            top: ~'calc(50% - 3px)';
+            left: ~'calc(50% - 3px)';
+            width: 7px;
+            height: 7px;
+        }
+
+        &-left {
+            left: 0;
+            &:before {transform: rotate(-45deg);}
+        }
+        &-right {
+            right: 0;
+            &:before {transform: rotate(135deg);}
+        }
+    }
+
+    &:hover &_arrow {
+        opacity: 1;
+    }
+}

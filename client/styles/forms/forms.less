@@ -1,0 +1,173 @@
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+textarea,
+select {
+    border: @input-border;
+    box-shadow: none;
+    font-size: @input-font-size;
+    font-family: @input-font-family;
+    font-weight: @input-font-weight;
+    width: 100%;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+select {
+    padding: @input-padding;
+    height: @input-height;
+}
+::-webkit-input-placeholder {color: @placeholder-color;opacity: 1; .transition(opacity .3s);}
+:-moz-placeholder {color: @placeholder-color;opacity: 1;.transition(opacity .5s);}
+::-moz-placeholder {color: @placeholder-color;opacity: 1;.transition(opacity .5s);}
+:-ms-input-placeholder {color: @placeholder-color;opacity: 1;.transition(opacity .5s);}
+:focus::-webkit-input-placeholder {opacity: 0;}
+:focus:-moz-placeholder {opacity: 0;}
+:focus::-moz-placeholder {opacity: 0;}
+:focus:-ms-input-placeholder {opacity: 0;}
+textarea {
+    padding: @textarea-padding;
+    height: @textarea-height;
+    resize: none;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-ms-expand {display: none;}
+
+// ========================= Checkbox =========================
+input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    font-size: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 2em;
+    &:before, &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:before {
+        border: 1px solid @white;
+        border-radius: 3px;
+        width: 17px;
+        height: 17px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+input[type="checkbox"]:checked + label {
+    &:after {
+        border-bottom: 2px solid @white;
+        border-left: 2px solid @white;
+        display: block;
+        top: 4px;
+        left: 6px;
+        width: 5px;
+        height: 5px;
+        .transform-rotate(-45deg);
+    }
+}
+
+// ---------------------- Buttons -----------------------
+input[type=submit], button, .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: @btn-font-size;
+    font-family: @btn-font-family;
+    font-weight: 400;
+    letter-spacing: -.05em;
+    padding: @btn-padding;
+    height: @btn-height;
+    line-height: @btn-height;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    .transition(background-color .3s, color 0.4s ease 0s);
+}
+input[type=submit]:hover, button:hover, button:focus {
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    input[type=submit], button, .btn {
+        font-size: @btn-font-size-mobile;
+    }
+}
+
+// Button yellow
+.btn-yellow {
+    color: @black;
+    background-color: @yellow;
+    &:hover, &.active {
+        color: @black;
+        background-color: @yellow-light;
+    }
+}
+
+// Button blue
+.btn-blue {
+    color: @white;
+    background-color: @purple_1;
+    box-shadow: .41px .91px 4px 0 rgba(0,0,0,0.36);
+
+    &:hover, &.active {
+        color: @white;
+        background-color: @purple_2;
+    }
+}
+
+// Button purple
+.btn-purple {
+    color: @white;
+    background-color: @purple_2;
+    box-shadow: .41px .91px 4px 0 rgba(0,0,0,0.36);
+
+    &:hover, &.active {
+        color: @white;
+        background-color: @purple_1;
+    }
+}
+
+.form {
+
+    &_field {
+        margin-bottom: 1.2em;
+    }
+
+    &_request {
+        overflow: hidden;
+        
+        & > div {
+            &:nth-child(1), &:nth-child(2) {width: ~'calc(50% - 8px)';}
+            &:nth-child(1) {float: left;}
+            &:nth-child(2) {float: right;}
+            &:nth-child(3) {clear: both;}
+        }
+        .btn {
+            width: 100%;
+            height: 45px;
+        }
+    }
+
+    &_errors {
+        &-item {
+            color: @red;
+            font-size: @font-size14;
+        }
+    }
+}

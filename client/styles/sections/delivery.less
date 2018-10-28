@@ -1,0 +1,42 @@
+.delivery {
+    background-color: @gray-lighter;
+    border-top: @border-solid-base;
+    border-bottom: @border-solid-base;
+    padding-top: 12.5em;
+    padding-bottom: 11.5em;
+    margin-bottom: 2em;
+
+    &_items {
+        display: flex;
+    }
+
+    &_item {
+        padding: 0 4em 1em;
+        width: 50%;
+
+        &:first-child {
+            position: relative;
+            text-align: right;
+
+            &:before {
+                content: '';
+                background-color: @yellow-border;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 1px;
+            }
+        }
+
+        &-title {
+            font-size: @font-size32;
+            margin-bottom: .5em;
+        }
+        &-text {
+            display: inline-block;
+            font-size: @font-size16;
+            max-width: 210px;
+        }
+    }
+}

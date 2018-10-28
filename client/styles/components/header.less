@@ -1,0 +1,60 @@
+.header {
+  background-color: @bg-header;
+  border-bottom: 1px solid @gray-border;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @header-height;
+  z-index: 999;
+  &_wrapper {
+    .flexbox(space-between, center, center);
+    max-width: 102.4em;
+    width: 100%;
+    height: 100%;
+  }
+  &.header_scroll {
+
+  }
+}
+
+.logo {
+    padding-left: 13px;
+    padding-bottom: 12px;
+}
+
+.main-menu {
+    padding-bottom: .5em; 
+    &_list {
+        .flexbox(center, center, center);
+    }
+    &_item {
+        padding: 0 1.5em;
+    }
+    &_link {
+        color: @gray;
+        font-size: 1.5em;
+        transition: color 0.4s ease 0s;
+        &:hover {
+            color: @gray-light;
+        }
+        &.active {
+            color: @gray-light;
+        }
+    }
+}
+
+.phones {
+    padding-left: 5em;
+    position: relative;
+    &.icon-phone:before {
+        font-size: 24px;
+        position: absolute;
+        top: .2em;
+        left: 0;
+    }
+    &_item {
+        font-size: 1.4em;
+        padding-bottom: .35em;
+    }
+}

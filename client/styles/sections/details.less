@@ -1,0 +1,58 @@
+.details {
+    background-color: @gray-lighter;
+    border-top: @border-solid-base;
+    border-bottom: @border-solid-base;
+    padding-top: 5em;
+    margin-bottom: 2em;
+
+    &_info {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin-bottom: 5em;
+    }
+
+    &_item {
+        padding-right: 2.5em;
+        position: relative;
+        width: 14.5em;
+        text-align: right;
+
+        &-title {
+            color: @brown;
+            font-size: @font-size32;
+            margin-bottom: 5px;
+
+            span {
+                color: @gray-dark;
+                font-size: .5em;
+            }
+        }
+        &-text {
+            font-size: @font-size16;
+            line-height: 1;
+        }
+    }
+
+    &_figure {
+        text-align: center;
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &_colors {
+        position: absolute;
+        top: 1em;
+        right: 0;
+    }
+    &_color {
+        border-radius: 3px;
+        margin-bottom: .7em; 
+        width: 1.6em;
+        height: 1.6em;
+    }
+}

@@ -1,0 +1,37 @@
+.info {
+    padding-bottom: 2em;
+    &_content {
+        background-color: @gray-lighter;
+        padding: 4em 0;
+        text-align: center;
+    }
+    &_title {
+        font-size: @font-size32;
+        font-weight: 500;
+    }
+    &_list {
+        .flexbox(center, center, stretch);
+        counter-reset: section;
+        padding-top: 4em;
+    }
+    &_item {
+        .flexchild(0, 1, 33.33%);
+        font-size: @font-size22;
+        font-weight: 300;
+        padding: 0 1.5em;
+        &:before {
+            counter-increment: section;
+            content: counter(section);
+            border: 1px solid @purple;
+            border-radius: 50%;
+            display: block;
+            font-size: @font-size28/@font-size22;
+            font-weight: 300;
+            margin: 0 auto 1em;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+        }
+    }
+}

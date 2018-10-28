@@ -1,0 +1,52 @@
+.order {
+    display: flex;
+    min-height: 57em;
+    overflow: hidden;
+    box-shadow: 0 1em 1em 0 rgba(0,0,0,0.2);
+
+    &_green-wall {
+        background-image: url('../../images/green_wall/green-wall_bg.jpg');
+    }
+    &_phyto-picture {
+        background-image: url('../../images/phyto_picture/phyto-picture_bg.png');
+    }
+
+    .wrapper {
+        .flexbox(flex-start, stretch, stretch);
+        width: 100%;
+    }
+    &_sidebar {
+        background-color: @white_75;
+        padding: 6.5em 1.5em 10em;
+        text-align: center;
+        width: 23em;
+        box-shadow: .41px .91px 4px 0 rgba(0,0,0,0.36);
+    }
+    &_title {
+        font-size: @font-size26;
+        font-weight: 300;
+        letter-spacing: -.1em;
+        margin-bottom: .4em;
+    }
+    &_subtitle {
+        font-size: @font-size22;
+        font-weight: 300;
+        letter-spacing: -0.05em;
+    }
+    &_list {
+        margin-top: 4em;
+        margin-bottom: 6em;
+    }
+    &_item {
+        font-size: @font-size12;
+        font-weight: 300;
+        letter-spacing: -0.05em;
+        margin-bottom: .33em;
+    }
+    &_btn {
+        font-size: @font-size15;
+        height: 1.67em;
+        line-height: 1.67em;
+        padding: 0 2em;
+    }
+}

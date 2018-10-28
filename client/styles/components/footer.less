@@ -1,0 +1,42 @@
+.footer {
+    background-color: #2a2a2a;
+    padding: 2em 0;
+    &_wrapper {
+        .flexbox(space-between, space-between, center);
+        max-width: 102.4em;
+    }
+    &_logo {
+
+    }
+    &_info {
+        .flexbox(center, center, center);
+        color: @white;
+    }
+}
+
+.email {
+    color: @white;
+    border-bottom: 1px solid @white;
+    font-size: @font-size16;
+    .transition(border-bottom .3s);
+    &:hover {
+        color: @white;
+        border-bottom: 1px solid rgba(255,255,255, 0);
+    }
+}
+
+.social {
+    padding-right: 5em;
+    &_link {
+        color: @gray-light;
+        font-size: @font-size22;
+        margin-left: 1em;
+        .transition(color .3s);
+        &:first-child {margin: 0;}
+        &:hover {
+            color: @white;
+            opacity: .75;
+        }
+    }
+}
+

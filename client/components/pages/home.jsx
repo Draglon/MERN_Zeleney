@@ -1,31 +1,30 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getPopupToggle } from '../../store/selector.jsx';
 
-var Section = require('../sections/Section.jsx');
+const Section = require('../sections/Section.jsx');
 const dataHome = require('./data/dataHome.jsx');
+const Popup = require('../popup.jsx');
 
-var Popup = require('../popup.jsx');
-
-class Home extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {showPopup: false};
-
-        this.togglePopup = () => {
-            this.setState({showPopup: !this.state.showPopup});
-        }
-    }
-
+class Home extends Component {
     render() {
-        return (
-            <main className="main">
-                {dataHome.sections.map( (section, index) => <Section data={section} key={index} popup={this.togglePopup} /> ) }
+        const { popupToggle } = this.props;
 
-                {this.state.showPopup ? <Popup popup={this.togglePopup} /> : null}
+        return (
+            <main className='main'>
+                {dataHome.sections.map( (section, index) => <Section data={section} key={index} /> ) }
+
+                {popupToggle ? <Popup /> : null}
             </main>
         );
     }
 }
- 
-module.exports = Home;
+
+export default connect(
+    state => ({
+        popupToggle: getPopupToggle(state),
+    }),
+    dispatch => ({
+        
+    })
+)(Home);

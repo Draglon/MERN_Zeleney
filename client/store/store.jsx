@@ -3,41 +3,32 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { connectRoutes } from 'redux-first-router';
 import createHistory from 'history/createBrowserHistory';
 import thunk from 'redux-thunk';
-// import queryString from 'query-string';
+import queryString from 'query-string';
 
-// import { } from './reducers';
-// import { routesMap } from './routesMap';
+import { routesMap } from './routesMap.jsx';
+import popup from './reducers.jsx';
   
-// const history = createHistory();
+const history = createHistory();
   
-// const {
-//     reducer,
-//     middleware,
-//     enhancer,
-//     initialDispatch,
-// } = connectRoutes(history, routesMap, {
-//     initialDispatch: false,
-// });
-
-// export { initialDispatch };
-  
-// const rootReducer = combineReducers({
-
-// });
-
-// const middlewares = applyMiddleware(middleware, thunk);
-
-// export const store = createStore(
-//     rootReducer,
-//     // composeWithDevTools(enhancer, middlewares),
-//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
+const {
+    reducer,
+    middleware,
+    enhancer,
+    initialDispatch,
+} = connectRoutes(history, routesMap, {
+    initialDispatch: false,
+    querySerializer: queryString,
+});
+export { initialDispatch };
 
 const rootReducer = combineReducers({
-
+    location: reducer,
+    popup,
 });
 
-const store = createStore(
+const middlewares = applyMiddleware(middleware, thunk);
+
+export const store = createStore(
     rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeWithDevTools(enhancer, middlewares)
 );

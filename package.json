@@ -20,6 +20,7 @@
     "jquery": "*",
     "less": "^2.6.0",
     "mongoose": "*",
+    "query-string": "^6.2.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-masonry-component": "^4.0.0",

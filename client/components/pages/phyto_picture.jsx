@@ -1,31 +1,30 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getPopupToggle } from '../../store/selector.jsx';
 
-var Section = require('../sections/Section.jsx');
+const Section = require('../sections/Section.jsx');
 const dataPhytoPicture = require('./data/dataPhytoPicture.jsx');
+const Popup = require('../popup.jsx');
 
-var Popup = require('../popup.jsx');
-
-class PhytoPicture extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {showPopup: false};
-
-        this.togglePopup = () => {
-            this.setState({showPopup: !this.state.showPopup});
-        }
-    }
-
+class PhytoPicture extends Component {
     render() {
+        const { popupToggle } = this.props;
+
         return (
-            <main className="main">
-                {dataPhytoPicture.sections.map( (section, index) => <Section data={section} key={index} popup={this.togglePopup} /> ) }
-                
-                {this.state.showPopup ? <Popup popup={this.togglePopup} /> : null}
+            <main className='main'>
+                {dataPhytoPicture.sections.map( (section, index) => <Section data={section} key={index} /> ) }
+
+                {popupToggle ? <Popup /> : null}
             </main>
         );
     }
 }
- 
-module.exports = PhytoPicture;
+
+export default connect(
+    state => ({
+        popupToggle: getPopupToggle(state),
+    }),
+    dispatch => ({
+        
+    })
+)(PhytoPicture);

@@ -1,7 +1,8 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getPopupToggle } from '../../../store/selector.jsx';
 
-class SectionMain extends React.Component {
-
+class SectionMain extends Component {
     constructor(props) {
         super(props);
 
@@ -10,27 +11,38 @@ class SectionMain extends React.Component {
             subTitle: this.props.data.subTitle,
             button: this.props.data.button,
             items: this.props.data.items,
-
-            popup: this.props.popup
         };
+    }
+    
+    popupToggle() {
+        this.props.onPopupToggle();
     }
 
     render() {
         return (
-            <div className="wrapper">
-                <ul className="list">
+            <div className='wrapper'>
+                <ul className='list'>
                     {
                         this.state.items.map(function(item, i){
-                            return <li className="list_item" key={i}>{item}</li>
+                            return <li className='list_item' key={i}>{item}</li>
                         })
                     }
                 </ul>
-                <h1 className="title">{this.state.title}</h1>
-                <h2 className="sub-title">{this.state.subTitle}</h2>
-                <button className="btn btn-yellow btn-consultation" onClick={this.state.popup}>{this.state.button}</button>
+                <h1 className='title'>{this.state.title}</h1>
+                <h2 className='sub-title'>{this.state.subTitle}</h2>
+                <button className='btn btn-yellow btn-consultation' onClick={this.popupToggle.bind(this)}>{this.state.button}</button>
             </div>
         );
     }
 }
 
-module.exports = SectionMain;
+export default connect(
+    state => ({
+        popupToggle: getPopupToggle(state),
+    }),
+    dispatch => ({
+        onPopupToggle: () => {
+            dispatch({type: 'POPUP_TOGGLE' });
+        },
+    })
+)(SectionMain);

@@ -1,6 +1,6 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-class Delivery extends React.Component {
+class Delivery extends Component {
 
     constructor(props) {
         super(props);

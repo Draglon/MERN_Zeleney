@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from 'react';
 var Logo = require('./logo.jsx');
 var Phones = require('./phones.jsx');
 var SocialLinks = require('./social.jsx');
@@ -8,7 +8,7 @@ const propsValues = {
     urlLogo: require('../images/logo_footer.jpg')
 };
 
-class Footer extends React.Component {      
+class Footer extends Component {      
     render() {
         return (
             <footer className='footer' id='footer'>

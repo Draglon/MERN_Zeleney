@@ -1,6 +1,10 @@
 var webpack = require('webpack');
 
 module.exports = {
+    mode: 'development',
+    devServer: {
+        historyApiFallback: true
+    },
     entry: "./client/main.js",
     output: {
         path: __dirname + '/public/build/',

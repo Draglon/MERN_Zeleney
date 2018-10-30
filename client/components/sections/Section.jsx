@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from 'react';
 
 var SectionHeader = require('./SectionHeader.jsx');
 // Home page
@@ -17,7 +17,7 @@ var SectionDelivery = require('./section_content/Delivery.jsx');
 var SectionMyself = require('./section_content/Myself.jsx');
 var SectionBlockByBlock = require('./section_content/BlockByBlock.jsx');
 
-class Section extends React.Component {
+class Section extends Component {
     constructor(props) {
         super(props);
 

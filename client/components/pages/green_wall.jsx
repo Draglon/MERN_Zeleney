@@ -6,7 +6,7 @@ const Section = require('../sections/Section.jsx');
 const dataGreenWall = require('./data/dataGreenWall.jsx');
 const Popup = require('../popup.jsx');
 
-class GreenWall extends React.Component {
+class GreenWall extends Component {
     render() {
         const { popupToggle } = this.props;
 

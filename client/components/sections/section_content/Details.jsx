@@ -1,7 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
 var Colors = require('./data/colors.jsx');
 
-class SectionDetails extends React.Component {
+class SectionDetails extends Component {
 
     constructor(props) {
         super(props);

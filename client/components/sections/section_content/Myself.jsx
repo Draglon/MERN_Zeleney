@@ -1,7 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
 var Delivery = require('./data/delivery-item.jsx');
 
-class SectionMyself extends React.Component {
+class SectionMyself extends Component {
 
     constructor(props) {
         super(props);

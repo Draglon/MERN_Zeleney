@@ -1,13 +1,13 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-class Field extends React.Component {
+class Field extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
             field: this.props.data
-        }
+        };
     }
 
     render() {

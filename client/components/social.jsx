@@ -1,6 +1,6 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-class SocialLinks extends React.Component {
+class SocialLinks extends Component {
 
     constructor(props) {
         super(props);

@@ -1,4 +1,4 @@
-var React = require('react');
+import React, { Component } from 'react';
 var Logo = require('./logo.jsx');
 var Navigation = require('./navigation.jsx');
 var Phones = require('./phones.jsx');
@@ -8,7 +8,7 @@ const propsValues = {
     urlLogo: require('../images/logo.png')
 };
 
-class Header extends React.Component {
+class Header extends Component {
     render() {
         return (
             <header className='header' id='header'>

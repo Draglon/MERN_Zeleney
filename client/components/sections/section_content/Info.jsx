@@ -1,6 +1,6 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-class SectionInfo extends React.Component {
+class SectionInfo extends Component {
 
     constructor(props) {
         super(props);

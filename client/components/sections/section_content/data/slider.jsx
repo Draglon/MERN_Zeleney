@@ -1,6 +1,6 @@
-var React = require('react');
+import React, { Component } from 'react';
 
-class Slider extends React.Component {
+class Slider extends Component {
 
     constructor(props) {
         super(props);

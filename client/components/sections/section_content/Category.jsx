@@ -1,7 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 
-class SectionCategory extends React.Component {
+class SectionCategory extends Component {
 
     constructor(props) {
         super(props);

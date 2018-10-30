@@ -11,11 +11,11 @@ class Colors extends React.Component {
 
     render() {
         return (
-            <div className="details_colors">
+            <div className='details_colors'>
                 {
                     this.state.colors.map(function(color, j) {
                         return (
-                            <div className="details_color" key={j} style={{backgroundColor: color}}></div>
+                            <div className='details_color' key={j} style={{backgroundColor: color}}></div>
                         );
                     })
                 }

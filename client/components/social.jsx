@@ -8,12 +8,12 @@ class SocialLinks extends React.Component {
         this.state = {
             links: [
                 {
-                    icon: "icon-facebook",
-                    link: "https://www.facebook.com/zeleney.studio/"
+                    icon: 'icon-facebook',
+                    link: 'https://www.facebook.com/zeleney.studio/'
                 },
                 {
-                    icon: "icon-instagram",
-                    link: "http://instagram.com/zeleney.studio"
+                    icon: 'icon-instagram',
+                    link: 'http://instagram.com/zeleney.studio'
                 }
             ]
         };
@@ -21,10 +21,10 @@ class SocialLinks extends React.Component {
 
     render() {
         return (
-            <div className="social">
+            <div className='social'>
                 {
                     this.state.links.map(function(socialLink, i) {
-                        return <a className={"social_link " + socialLink.icon} href={socialLink.link} key={i}></a>
+                        return <a className={'social_link ' + socialLink.icon} href={socialLink.link} key={i}></a>
                     })
                 }
             </div>

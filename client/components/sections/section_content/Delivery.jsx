@@ -13,7 +13,7 @@ class SectionDelivery extends React.Component {
 
     render() {
         return (
-                <div className="wrapper">
+                <div className='wrapper'>
                     <Delivery data={this.state.delivery} />
                 </div>
         );

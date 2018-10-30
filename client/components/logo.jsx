@@ -7,13 +7,13 @@ class Logo extends React.Component {
 
         this.state = { 
             logoUrl: this.props.data.urlLogo,
-            logoAlt: "Zeleney"
+            logoAlt: 'Zeleney'
          };
     }
 
     render() {
         return (
-            <div className="logo"><img className="logo_img" src={this.state.logoUrl} alt={this.state.logoAlt} /></div>
+            <div className='logo'><img className='logo_img' src={this.state.logoUrl} alt={this.state.logoAlt} /></div>
         );
     }
 }

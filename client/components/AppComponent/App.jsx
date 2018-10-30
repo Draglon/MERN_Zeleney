@@ -17,19 +17,19 @@ const MainComponent = React.createClass({
     render() {
         return (
             <Router history={history}>
-                {window.location.pathname === "/admin" ? 
+                {window.location.pathname === '/admin' ? 
                     <div>
                         <Switch>
-                            <Route path="/admin" component={AdminPanel} />
+                            <Route path='/admin' component={AdminPanel} />
                         </Switch>
                     </div>
                 :
                     <div>
                         <Header />
                         <Switch>
-                            <Route path="/" exact component={Home} />
-                            <Route path="/green_wall" component={GreenWall} />
-                            <Route path="/phyto_picture" component={PhytoPicture} />
+                            <Route path='/' exact component={Home} />
+                            <Route path='/green_wall' component={GreenWall} />
+                            <Route path='/phyto_picture' component={PhytoPicture} />
                             <Route component={NotFound} />
                         </Switch>
                         <Footer />

@@ -13,9 +13,9 @@ class SectionOxygen extends React.Component {
 
     render() {
         return (
-            <div className="wrapper">
-                <h2 className="oxygen_title">{this.state.title}</h2>
-                <p className="oxygen_text">{this.state.text}</p>
+            <div className='wrapper'>
+                <h2 className='oxygen_title'>{this.state.title}</h2>
+                <p className='oxygen_text'>{this.state.text}</p>
             </div>
         );
     }

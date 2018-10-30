@@ -13,13 +13,13 @@ class SectionInfo extends React.Component {
 
     render() {
         return (
-            <div className="info_content">
-                <div className="wrapper">
-                    <h2 className="info_title">{this.state.subTitle}</h2>
-                    <ul className="info_list">
+            <div className='info_content'>
+                <div className='wrapper'>
+                    <h2 className='info_title'>{this.state.subTitle}</h2>
+                    <ul className='info_list'>
                         {
                             this.state.items.map(function(item, i){
-                                return <li className="info_item" key={i}>{item}</li>
+                                return <li className='info_item' key={i}>{item}</li>
                             })
                         }
                     </ul>

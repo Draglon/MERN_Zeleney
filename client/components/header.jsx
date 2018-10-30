@@ -4,15 +4,15 @@ var Navigation = require('./navigation.jsx');
 var Phones = require('./phones.jsx');
 
 const propsValues = {
-    classIcon: "icon-phone",
+    classIcon: 'icon-phone',
     urlLogo: require('../images/logo.png')
 };
 
 class Header extends React.Component {
     render() {
         return (
-            <header className="header" id="header">
-                <div className="wrapper header_wrapper">
+            <header className='header' id='header'>
+                <div className='wrapper header_wrapper'>
                     <Logo data={propsValues} />
                     <Navigation />
                     <Phones data={propsValues} />

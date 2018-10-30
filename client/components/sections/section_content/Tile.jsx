@@ -15,13 +15,13 @@ class SectionBlock extends React.Component {
 
     render() {
         return (
-            <div className={this.state.side === true ? "wrapper tile_container row-reverse" : "wrapper tile_container"}>
-                <figure className="tile_figure">
+            <div className={this.state.side === true ? 'wrapper tile_container row-reverse' : 'wrapper tile_container'}>
+                <figure className='tile_figure'>
                     <img src={this.state.url} alt={this.state.title} />
                 </figure>
-                <div className="tile_description">
-                    <h2 className="tile_title">{this.state.title}</h2>
-                    <p className="tile_text">{this.state.text}</p>
+                <div className='tile_description'>
+                    <h2 className='tile_title'>{this.state.title}</h2>
+                    <p className='tile_text'>{this.state.text}</p>
                 </div>
             </div>
         );

@@ -4,19 +4,19 @@ var Phones = require('./phones.jsx');
 var SocialLinks = require('./social.jsx');
 
 const propsValues = {
-    classIcon: "",
+    classIcon: '',
     urlLogo: require('../images/logo_footer.jpg')
 };
 
 class Footer extends React.Component {      
     render() {
         return (
-            <footer className="footer" id="footer">
-                <div className="wrapper footer_wrapper">
+            <footer className='footer' id='footer'>
+                <div className='wrapper footer_wrapper'>
                     <Logo data={propsValues} />
-                    <div className="footer_info">
+                    <div className='footer_info'>
                         <SocialLinks />
-                        <a className="email" href="mailto:info@zeleney.com">info@zeleney.com</a>
+                        <a className='email' href='mailto:info@zeleney.com'>info@zeleney.com</a>
                         <Phones data={propsValues} />
                     </div>
                 </div>

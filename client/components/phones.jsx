@@ -6,10 +6,10 @@ class Phones extends React.Component {
         super(props);
 
         this.state = { 
-            classPhones: this.props.data.classIcon ? "phones " + this.props.data.classIcon : "phones",
+            classPhones: this.props.data.classIcon ? 'phones ' + this.props.data.classIcon : 'phones',
             phones: [
-                "(067) 256-82-99",
-                "(095) 555-14-32"
+                '(067) 256-82-99',
+                '(095) 555-14-32'
             ]
         };
     }
@@ -19,7 +19,7 @@ class Phones extends React.Component {
             <div className={this.state.classPhones}>
                 {
                     this.state.phones.map(function(phone){
-                        return <div className="phones_item" key={phone}>{phone}</div>
+                        return <div className='phones_item' key={phone}>{phone}</div>
                     })
                 }
             </div>

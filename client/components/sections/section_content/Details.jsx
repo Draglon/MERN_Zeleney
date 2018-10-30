@@ -14,21 +14,21 @@ class SectionDetails extends React.Component {
 
     render() {
         return (
-            <div className="wrapper">
-                <div className="details_info">
+            <div className='wrapper'>
+                <div className='details_info'>
                     {
                         this.state.items.map(function(item, i) {
                             return (
-                                <div className="details_item" key={i}>
-                                    <p className="details_item-title" dangerouslySetInnerHTML={{__html: item.number}}></p>
-                                    <p className="details_item-text" dangerouslySetInnerHTML={{__html: item.label}}></p>
+                                <div className='details_item' key={i}>
+                                    <p className='details_item-title' dangerouslySetInnerHTML={{__html: item.number}}></p>
+                                    <p className='details_item-text' dangerouslySetInnerHTML={{__html: item.label}}></p>
                                     {item.colors ? <Colors dataColors={item.colors} /> : null}
                                 </div>
                             );
                         })
                     }
                 </div>
-                <figure className="details_figure">
+                <figure className='details_figure'>
                     <img src={this.state.url} />
                 </figure>
             </div>

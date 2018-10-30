@@ -12,8 +12,8 @@ class SectionHeader extends React.Component {
 
     render() {
         return (
-            <header className="section_header">
-                <h1 className="section_header-title" dangerouslySetInnerHTML={{__html: this.state.title}}></h1>
+            <header className='section_header'>
+                <h1 className='section_header-title' dangerouslySetInnerHTML={{__html: this.state.title}}></h1>
             </header>
         );
     }

@@ -42,7 +42,7 @@ class Slider extends React.Component {
             // slideIndex: this.getIndex(this.state.slideIndex)
             slider: this.state.slider.push(elem)
         });
-        // console.log("this.state.slider ");
+        // console.log('this.state.slider ');
         console.log(this.state.slider);
     }
 
@@ -71,16 +71,16 @@ class Slider extends React.Component {
         }
 
         return (
-            <div className="slider">
-                <a className="slider_arrow slider_arrow-left" onClick={() => this.prevSlide()}></a>
-                <a className="slider_arrow slider_arrow-right" onClick={() => this.nextSlide()}></a>
+            <div className='slider'>
+                <a className='slider_arrow slider_arrow-left' onClick={() => this.prevSlide()}></a>
+                <a className='slider_arrow slider_arrow-right' onClick={() => this.nextSlide()}></a>
 
-                <div className="slider_wrapper">
-                    <div className="slider_container" style={sliderCentered}>
+                <div className='slider_wrapper'>
+                    <div className='slider_container' style={sliderCentered}>
                         {this.state.slider.map( (slide, index) => 
-                            // <div key={index} style={slideItem.style} className={(index == this.state.slideIndex) ? "slider_item active" : "slider_item"} >
-                            <div key={index} className="slider_item">
-                                {slide.label ? <div className="slider_label" dangerouslySetInnerHTML={{__html: slide.label}}></div> : null}
+                            // <div key={index} style={slideItem.style} className={(index == this.state.slideIndex) ? 'slider_item active' : 'slider_item'} >
+                            <div key={index} className='slider_item'>
+                                {slide.label ? <div className='slider_label' dangerouslySetInnerHTML={{__html: slide.label}}></div> : null}
                                 <img src={slide.url} alt={slide.alt} />
                             </div>
                         )}

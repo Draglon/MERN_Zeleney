@@ -13,7 +13,7 @@ class SectionPortfolio extends React.Component {
 
     render() {
         return (
-            <div className="portfolio_content">
+            <div className='portfolio_content'>
                 <Slider data={this.state.slider} />
             </div>
         );

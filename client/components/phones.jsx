@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Phones extends Component {
 
@@ -27,4 +28,11 @@ class Phones extends Component {
     }
 }
 
-module.exports = Phones;
+export default connect(
+    state => ({
+
+    }),
+    dispatch => ({
+        
+    })
+)(Phones);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Home extends Component {
+class Auth extends Component {
     render() {
         return (
             <h1>AdminPanel</h1>
@@ -8,4 +8,4 @@ class Home extends Component {
     }
 };
 
-module.exports = Home;
+export default Auth;

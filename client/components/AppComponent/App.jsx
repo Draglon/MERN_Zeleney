@@ -14,30 +14,30 @@ var AdminPanel = require('./../admin/Auth.jsx');
 const history = createBrowserHistory();
 
 const MainComponent = React.createClass({
-    render() {
-        return (
-            <Router history={history}>
-                {window.location.pathname === '/admin' ? 
-                    <div>
-                        <Switch>
-                            <Route path='/admin' component={AdminPanel} />
-                        </Switch>
-                    </div>
-                :
-                    <div>
-                        <Header />
-                        <Switch>
-                            <Route path='/' exact component={Home} />
-                            <Route path='/green_wall' component={GreenWall} />
-                            <Route path='/phyto_picture' component={PhytoPicture} />
-                            <Route component={NotFound} />
-                        </Switch>
-                        <Footer />
-                    </div>
-                }
-            </Router>
-        );
-    },
+  render() {
+    return (
+      <Router history={history}>
+        {window.location.pathname === '/admin' ? 
+          <div>
+            <Switch>
+              <Route path='/admin' component={AdminPanel} />
+            </Switch>
+          </div>
+        :
+          <div>
+            <Header />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/green_wall' component={GreenWall} />
+              <Route path='/phyto_picture' component={PhytoPicture} />
+              <Route component={NotFound} />
+            </Switch>
+            <Footer />
+          </div>
+        }
+      </Router>
+    );
+  },
 });
 
 export default MainComponent;

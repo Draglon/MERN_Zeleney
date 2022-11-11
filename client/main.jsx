@@ -7,8 +7,8 @@ import AppComponent from './components/AppComponent/App.jsx';
 import './styles/style.less';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <AppComponent />
-    </Provider>,
-    document.getElementById('zeleney-app')
+  <Provider store={store}>
+    <AppComponent />
+  </Provider>,
+  document.getElementById('zeleney-app')
 );

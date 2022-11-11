@@ -11,24 +11,24 @@ import popup from './reducers.jsx';
 const history = createHistory();
   
 const {
-    reducer,
-    middleware,
-    enhancer,
-    initialDispatch,
+  reducer,
+  middleware,
+  enhancer,
+  initialDispatch,
 } = connectRoutes(history, routesMap, {
-    initialDispatch: false,
-    querySerializer: queryString,
+  initialDispatch: false,
+  querySerializer: queryString,
 });
 export { initialDispatch };
 
 const rootReducer = combineReducers({
-    location: reducer,
-    popup,
+  location: reducer,
+  popup,
 });
 
 const middlewares = applyMiddleware(middleware, thunk);
 
 export const store = createStore(
-    rootReducer,
-    composeWithDevTools(enhancer, middlewares)
+  rootReducer,
+  composeWithDevTools(enhancer, middlewares)
 );

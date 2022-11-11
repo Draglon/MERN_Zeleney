@@ -18,39 +18,39 @@ var SectionMyself = require('./section_content/Myself.jsx');
 var SectionBlockByBlock = require('./section_content/BlockByBlock.jsx');
 
 class Section extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            className: 'section ' + this.props.data.className,
-            title: this.props.data.title,
-            section: this.props.data.section,
-            content: this.props.data.content
-        };
-    }
+    this.state = {
+        className: 'section ' + this.props.data.className,
+        title: this.props.data.title,
+        section: this.props.data.section,
+        content: this.props.data.content
+    };
+  }
 
-    render() {
-        return (
-            <section className={this.state.className}>
-                {this.state.title ? <SectionHeader data={this.state.title} /> : null }
+  render() {
+    return (
+      <section className={this.state.className}>
+        {this.state.title ? <SectionHeader data={this.state.title} /> : null }
 
-                {(this.state.section==='main') ? <SectionMain data={this.state.content} /> : null }
-                {(this.state.section==='info') ? <SectionInfo data={this.state.content} /> : null }
-                {(this.state.section==='category') ? <SectionCategory data={this.state.content} /> : null }
-                {(this.state.section==='portfolio') ? <SectionPortfolio data={this.state.content} /> : null }
-                {(this.state.section==='request') ? <SectionRequest data={this.state.content} /> : null }
+        {(this.state.section==='main') ? <SectionMain data={this.state.content} /> : null }
+        {(this.state.section==='info') ? <SectionInfo data={this.state.content} /> : null }
+        {(this.state.section==='category') ? <SectionCategory data={this.state.content} /> : null }
+        {(this.state.section==='portfolio') ? <SectionPortfolio data={this.state.content} /> : null }
+        {(this.state.section==='request') ? <SectionRequest data={this.state.content} /> : null }
 
-                {(this.state.section==='order') ? <SectionOrder data={this.state.content} /> : null }
-                {(this.state.section==='tile') ? <SectionTile data={this.state.content} /> : null }
-                {(this.state.section==='oxygen') ? <SectionOxygen data={this.state.content} /> : null }
-                {(this.state.section==='simpleCare') ? <SectionSimpleCare data={this.state.content} /> : null }
-                {(this.state.section==='details') ? <SectionDetails data={this.state.content} /> : null }
-                {(this.state.section==='delivery') ? <SectionDelivery data={this.state.content} /> : null }
-                {(this.state.section==='myself') ? <SectionMyself data={this.state.content} /> : null }
-                {(this.state.section==='blockByBlock') ? <SectionBlockByBlock data={this.state.content} /> : null }
-            </section>
-        );
-    }
+        {(this.state.section==='order') ? <SectionOrder data={this.state.content} /> : null }
+        {(this.state.section==='tile') ? <SectionTile data={this.state.content} /> : null }
+        {(this.state.section==='oxygen') ? <SectionOxygen data={this.state.content} /> : null }
+        {(this.state.section==='simpleCare') ? <SectionSimpleCare data={this.state.content} /> : null }
+        {(this.state.section==='details') ? <SectionDetails data={this.state.content} /> : null }
+        {(this.state.section==='delivery') ? <SectionDelivery data={this.state.content} /> : null }
+        {(this.state.section==='myself') ? <SectionMyself data={this.state.content} /> : null }
+        {(this.state.section==='blockByBlock') ? <SectionBlockByBlock data={this.state.content} /> : null }
+      </section>
+    );
+  }
 }
 
 module.exports = Section;

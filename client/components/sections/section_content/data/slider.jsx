@@ -14,10 +14,6 @@ class Slider extends Component {
         };
 
         console.log(this.state.slider);
-
-
-
-
     }
 
     // getIndex(slide) {
